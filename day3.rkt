@@ -15,4 +15,9 @@
 
 (define subst
   (lambda (old new lst)
-    .....?
+    (cond ([null? lst] '())
+          ([list? lst] (cons (subst old new (car lst))
+                             (subst old new (cdr lst))))
+          ([equal? lst old] new)
+          (else lst))))
+                       
