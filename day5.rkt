@@ -19,4 +19,12 @@
     (if (null? lst) init
         (my-foldl f (f (car lst) init) (cdr lst)))))
 
+(define my-foldr
+  (lambda (f init lst)
+    (if (null? lst) init
+        (f (car lst) (my-foldr f init (cdr lst))))))
+
 (my-map addOne '(1 8 3 5))
+
+(my-foldl cons '(4 5 6) '(1 2 3))
+(my-foldr cons '(4 5 6) '(1 2 3))

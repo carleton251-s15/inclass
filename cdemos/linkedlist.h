@@ -1,3 +1,5 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 struct LList {
     int data;
     struct LList *next;
@@ -5,6 +7,10 @@ struct LList {
 
 typedef     struct LList     LList;
 
+// function prototype
+LList *init();
+LList *addToFront(LList *oldlist, int number);
+#endif
 
 
 

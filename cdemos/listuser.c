@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "metalist.h"
 #include "linkedlist.h"
 
 int main() {
-    // you would think..
-    LList *list = malloc(sizeof(LList));
-    (*list).data = 7;
-    printf("%i\n",(*list).data);
+    LList *mylist = init();
+    mylist = addToFront(mylist,5);
+    mylist = addToFront(mylist,7);
+    
 }
 
